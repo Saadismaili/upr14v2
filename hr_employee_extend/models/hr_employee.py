@@ -30,6 +30,7 @@ class HrEmployee(models.Model):
     @api.depends('cursus_ids')
     def _compute_move_ids_count(self):
         for record in self:
+            print('jj')
             record.cursus_ids_count = len(record.cursus_ids)
 
     @api.depends('travaux_ids')
